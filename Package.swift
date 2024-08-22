@@ -20,13 +20,16 @@ let package = Package(
   ],
 
   dependencies: [
-    .package(url: "https://github.com/JWStaiert/SnapshotTesting.git", .branch("devSnapshotCompare2"))
+    .package(url: "https://github.com/kronenthaler/swift-snapshot-testing.git", .branch("marktplaats-customizations"))
   ],
 
   targets: [
     .target(
       name: "SnapshotTestingEx",
-      dependencies: ["SnapshotTesting", "SnapshotTestingExObjC"]
+      dependencies: [ 
+        "SnapshotTestingExObjC",
+        .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
+      ]
     ),
     .target(
       name: "SnapshotTestingExObjC",
