@@ -20,7 +20,7 @@ let package = Package(
   ],
 
   dependencies: [
-    .package(url: "https://github.com/kronenthaler/swift-snapshot-testing.git", .branch("marktplaats-customizations"))
+    .package(url: "https://github.com/kronenthaler/swift-snapshot-testing", .branch("marktplaats-customizations"))
   ],
 
   targets: [
